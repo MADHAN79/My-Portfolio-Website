@@ -1,0 +1,87 @@
+@import "../../app.scss";
+
+.navbar {
+  height: 100px;
+
+  .wrapper {
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    @include mobile {
+      justify-content: flex-end;
+      padding: 20px;
+    }
+
+    span {
+      font-weight: bold;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .social {
+      display: flex;
+      gap: 20px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      img:hover{
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.rgb {
+  margin: 0 auto;
+/*   border: solid red 5px; */
+  width: 90%;
+  text-align: center;
+  color: #dad7cd;
+  font-size: 1.2rem;
+  font-weight: 800px;
+  position: relative;
+}
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.rgb::after, .rgb::before {
+  border-radius: 50px;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: conic-gradient(from var(--angle), red,green,blue,red);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;  
+  z-index: -1;
+  animation: 9s spin linear infinite;
+  
+}
+
+.rgb::before{
+   filter: blur(1.5rem);
+   opacity: 1;
+}
+
+@keyframes spin{
+  from{
+    --angle: 0deg; 
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+

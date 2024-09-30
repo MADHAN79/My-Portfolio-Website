@@ -1,0 +1,61 @@
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  //background-color: rgb(7, 3, 138);;
+  background-color: rgb(44, 0, 138);
+  color: lightgray;
+}
+body::-webkit-scrollbar {
+  width: 0.9rem;
+}
+body::-webkit-scrollbar-track {
+  background: black;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: -webkit-radial-gradient(
+    circle,
+    #ffffff 0%,
+    #00ddff 50%,
+    #1100ff 100%,
+  );
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  height: 100vh;
+  width: auto;
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
