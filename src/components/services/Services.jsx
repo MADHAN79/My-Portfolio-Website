@@ -52,7 +52,7 @@ const Services = () => {
           <h1>
             <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
           </h1>
-          <button>WHAT WE DO?</button>
+          <button className="rgb-border-button"><span>Website Development</span></button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
@@ -60,53 +60,50 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Education</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            Done my Computer Science Engineering in Kumaraguru College of Technology at Coimbatore, TN. 2023 Batch.
           </p>
-          <button>Go</button>
+          {/* <button>Go</button> */}
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Upskilled</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            I have the opportunity to get the hands-on learning with industry knowledge in the MERN Full Stack Web Development at a reputed platform - GUVI, IITM incubated ed-tech company.
           </p>
-          <button>Go</button>
+          {/* <button>Go</button> */}
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>What I do?</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            An enthusiastic MERN Stack Developer and I can completely design and develope a website according to your customised needs.
           </p>
-          <button>Go</button>
+          {/* <button>Go</button> */}
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Tech stacks</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            <ul>
+              <li>React18+</li>  
+              <li>Basics of Nextjs</li>
+              <li>Bootstrap</li>  
+              <li>Tailwind CSS</li>  
+              <li>Sql, MongoDB & Express</li>  
+              <li>Nodejs</li>  
+              <li>UI libraries like shadcn, materialUI, chakraUI and more</li>  
+            </ul>
+            
           </p>
-          <button>Go</button>
+          {/* <button>Go</button> */}
         </motion.div>
       </motion.div>
     </motion.div>

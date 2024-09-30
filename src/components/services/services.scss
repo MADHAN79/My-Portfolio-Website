@@ -14,26 +14,27 @@
     gap: 20px;
 
     @include mobile {
-      align-self: center;
-      text-align: center;
-      flex-direction: column;
+      display: none;
+      // align-self: center;
+      // text-align: center;
+      // flex-direction: column;
     }
 
     p {
       font-weight: 200;
       font-size: 20px;
-      color: gray;
+      color: rgb(255, 255, 255);
       text-align: right;
     }
 
     hr {
       width: 500px;
       border: none;
-      border-top: 0.5px solid gray;
+      border-top: 3px solid rgb(0, 234, 255);
 
-      @include mobile {
-        width: 300px;
-      }
+      // @include mobile {
+      //   width: 300px;
+      // }
     }
   }
   .titleContainer {
@@ -41,6 +42,79 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    //https://codepen.io/jeihunmammadzada/pen/qBxzJBM
+    .rgb-border-button {
+      position: relative;
+      z-index: 0;
+      height: 100px;
+      overflow: hidden;
+      border: none !important;
+      padding: 0 !important;
+      background: #000000 !important;
+      color: #656565;
+      background: white;
+      border-radius: 8px;
+      width: 250px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 400;
+      box-shadow: 0 4px 50px 0 rgb(0 0 0 / 7%);
+      transition: .2s all linear;
+      text-decoration: initial;
+      -webkit-box-reflect: below 1px -webkit-linear-gradient(transparent, #0004); //https://codepen.io/sumeet1610/pen/MWpNjgo
+
+      @include mobile {
+        font-size: 20px;
+        width: 250px;
+        height: 100px;
+      }
+  }
+  
+  .rgb-border-button span{
+      position: relative;
+      z-index: 1;
+      height: calc( 100% - 4px );
+      width: calc( 100% - 4px );
+      //top: 2px;
+      left: 2px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 8px;
+      color: white;
+      background: #000000;
+  }
+  
+  .rgb-border-button:after{
+     content: "";
+      position: absolute;
+      z-index: -2;
+      left: -50%;
+      top: -50%;
+      width: 200%;
+      height: 200%;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: 50% 50%, 50% 50%;
+      background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+      background-image: linear-gradient(90deg, rgba(255,255,255,0)    0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+      -webkit-animation: rotate 2s linear infinite;
+      animation: rotate 2s linear infinite;
+  }
+  
+  
+  @-webkit-keyframes rotate {
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+  
+  @keyframes rotate {
+      100% {
+          transform: rotate(360deg);
+      }
+  }
 
     @include mobile {
       width: 100%;
@@ -64,6 +138,7 @@
         object-fit: cover;
 
         @include mobile {
+          margin-top: 10px;
           width: 200px;
           height: 50px;
         }
@@ -74,34 +149,35 @@
         font-weight: 100;
 
         @include mobile {
-          font-size: 36px;
+          font-size: 26px;
         }
       }
 
-      button {
-        width: 300px;
-        height: 100px;
-        border-radius: 50px;
-        background-color: orange;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-
-        @include mobile {
-          font-size: 16px;
-          width: 150px;
-          height: 50px;
-        }
-      }
+      // button {
+      //   width: 300px;
+      //   height: 100px;
+      //   border-radius: 50px;
+      //   background-color: orange;
+      //   border: none;
+      //   font-size: 24px;
+      //   cursor: pointer;
+      //  }
     }
   }
   .listContainer {
     flex: 2;
     display: flex;
-    max-width: 1366px;
+    width: 90vw;
     margin: auto;
+    margin-bottom: 20px;
+
+    h2{
+      text-decoration: underline;
+      text-underline-offset: 9px;
+    }
 
     @include mobile {
+      margin-top: -230px;
       flex-direction: column;
       width: 100%;
     }
@@ -114,15 +190,17 @@
       justify-content: space-between;
 
       @include mobile {
-        border: none;
+        font-size: 10px;
+        margin: 10px;
         align-items: center;
         gap: 20px;
         padding: 10px;
       }
 
       p {
-        @include mobile {
-          display: none;
+        font-size: 20px;
+        @include mobile{
+          font-size: 12px;
         }
       }
 
