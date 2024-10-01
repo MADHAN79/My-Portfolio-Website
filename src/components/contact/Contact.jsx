@@ -26,22 +26,18 @@ const Contact = () => {
 
   const isInView = useInView(ref, { margin: "-100px" });
 
+  //function to send email
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_94y20xo",
-        "template_v10u2oh",
-        formRef.current,
-        "pX_2hasGmGcuvjXIW"
-      )
+    emailjs.sendForm('service_282m6cm','template_lnhon3p',formRef.current,'vC1emRwXDTav5d6kd',)
       .then(
         (result) => {
           setSuccess(true)
         },
         (error) => {
           setError(true);
+          console.log(error.text)
         }
       );
   };
@@ -106,12 +102,12 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
         >
-          <input type="text" required placeholder="Name" name="name"/>
-          <input type="email" required placeholder="Email" name="email"/>
+          <input type="text" required placeholder="Your Name" name="name"/>
+          <input type="email" required placeholder="Your Email" name="email"/>
           <textarea rows={8} placeholder="Message" name="message"/>
           <button>Submit</button>
-          {error && "Error"}
-          {success && "Success"}
+          {error && "Error sending the email"}
+          {success && "✅Email sent successfully"}
         </motion.form>
       </div>
     </motion.div>
