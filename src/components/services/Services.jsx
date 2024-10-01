@@ -57,8 +57,8 @@ const Services = () => {
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
         <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
+          className="box glow-on-hover"
+          //whileHover={{ background: "lightgray", color: "black" }}
         >
           <h2>Education</h2>
           <p>
@@ -67,8 +67,8 @@ const Services = () => {
           {/* <button>Go</button> */}
         </motion.div>
         <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
+          className="box glow-on-hover"
+          //whileHover={{ background: "lightgray", color: "black" }}
         >
           <h2>Upskilled</h2>
           <p>
@@ -77,8 +77,8 @@ const Services = () => {
           {/* <button>Go</button> */}
         </motion.div>
         <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
+          className="box glow-on-hover"
+          //whileHover={{ background: "lightgray", color: "black" }}
         >
           <h2>What I do?</h2>
           <p>
@@ -87,8 +87,8 @@ const Services = () => {
           {/* <button>Go</button> */}
         </motion.div>
         <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
+          className="box glow-on-hover"
+          //whileHover={{ background: "lightgray", color: "black" }}
         >
           <h2>Tech stacks</h2>
           <p>

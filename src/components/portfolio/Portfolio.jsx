@@ -57,7 +57,7 @@ const Single = ({ item }) => {
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             <p>{item.tech}</p>
-            <button><a href={item.link} target="blank" >See demo</a></button>
+            <button className="glow-on-hover"><a href={item.link} target="blank" >See demo</a></button>
           </motion.div>
         </div>
       </div>
