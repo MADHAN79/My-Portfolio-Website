@@ -30,19 +30,14 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      process.env.EMAILJS_SERVICE_ID,
-      process.env.EMAILJS_TEMPLATE_ID,
-      formRef.current,
-      process.env.EMAILJS_PUBLIC_KEY
-    )
+    emailjs.sendForm('service_282m6cm','template_lnhon3p',formRef.current,'vC1emRwXDTav5d6kd')
       .then(
         (result) => {
           setSuccess(true)
         },
         (error) => {
           setError(true);
-          console.log(error.text)
+          //console.log(error.text)
         }
       );
   };
