@@ -31,7 +31,7 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.sendForm('service_282m6cm','template_lnhon3p',formRef.current,'vC1emRwXDTav5d6kd')
-      .then(
+      .then( 
         (result) => {
           setSuccess(true)
         },
