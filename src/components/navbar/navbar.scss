@@ -71,8 +71,8 @@
   animation: 9s spin linear infinite;
 
   @include mobile{
-    top: 10%;
-    left: -110%;
+    top: -30%;
+    left: -100%;
   }
   
 }
