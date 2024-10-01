@@ -69,6 +69,12 @@
   translate: -50% -50%;  
   z-index: -1;
   animation: 9s spin linear infinite;
+
+  @include mobile{
+    top: -5%;
+    left: -5%;
+  }
+  
 }
 
 .rgb::before{
