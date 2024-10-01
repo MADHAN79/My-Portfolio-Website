@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
-config.dotenv()
+
 const variants = {
   initial: {
     y: 500,
