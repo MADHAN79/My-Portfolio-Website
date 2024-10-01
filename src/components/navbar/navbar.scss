@@ -53,8 +53,8 @@
   position: relative;
     
     @include mobile{
-      margin-left: -70px;
-      margin-top: -70px;
+      margin-left: 20px;
+      
     }
 }
 @property --angle{
